@@ -42,12 +42,24 @@ private val LightColorPalette = lightColors(
     */
 )
 
+private val LightTimerColorPalette = lightColors(
+    primary = lightBlue,
+    primaryVariant = darkBlue,
+    secondary = lightBlue
+)
+
+private val DarkTimerColorPalette = lightColors(
+    primary = lightBlack,
+    primaryVariant = darkBlack,
+    secondary = grey
+)
+
 @Composable
-fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+fun TimerTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
     val colors = if (darkTheme) {
-        DarkColorPalette
+        DarkTimerColorPalette
     } else {
-        LightColorPalette
+        LightTimerColorPalette
     }
 
     MaterialTheme(
